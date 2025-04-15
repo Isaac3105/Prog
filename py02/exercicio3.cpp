@@ -13,6 +13,3 @@ int unsigned long next_mersenne(unsigned long n){
     }
     return n == 0? 0 : res;
 }
-
-
-

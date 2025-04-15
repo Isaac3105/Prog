@@ -10,8 +10,6 @@ int ssum(int arr[], int n){
         if (temp < 0) temp = 0;
         
     }
-
-    
     if(temp > atual){
         atual = temp;
     }
