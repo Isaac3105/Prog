@@ -6,7 +6,12 @@
         "type": "cppdbg",
         "request": "launch",
         "program": "${fileDirname}/${fileBasenameNoExtension}.out",
-        "args": [],
+        "args": [
+          "-g",
+          "${file}",
+          "-o",
+          "${fileDirname}/${fileBasenameNoExtension}.out"
+        ],
         "stopAtEntry": false,
         "cwd": "${fileDirname}",
         "environment": [],
