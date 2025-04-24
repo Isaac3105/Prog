@@ -1,0 +1,6 @@
+04-05-2025 withdrawal 100
+05-05-2025 deposit 6
+05-06-2025 deposit 100
+12-06-2025 deposit 300
+17-06-2025 withdrawal 200
+28-07-2025 deposit 400

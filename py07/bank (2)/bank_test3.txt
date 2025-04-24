@@ -1,0 +1,7 @@
+05-01-2024 deposit 500
+12-01-2024 deposit 300
+25-01-2024 deposit 200
+08-02-2024 withdrawal 400
+20-02-2024 withdrawal 250
+01-03-2024 deposit 600
+15-03-2024 withdrawal 100
