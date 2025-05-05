@@ -41,16 +41,12 @@ Date::Date(const std::string& year_month_day) {
     std::string y, m, d;
 
     if (std::getline(text, y, '/') && std::getline(text, m, '/') && std::getline(text, d)) {
-        try {
-            year = std::stoi(y);
-            month = std::stoi(m);
-            day = std::stoi(d);
-        } catch (...) {
-            year = month = day = 0;
-            return;
-        }
-
-        if (!(0 < day && day <= num_days(year, month) && 0 < month && month <= 12 && 0 < year && year < 10000)) {
+        
+        year = std::stoi(y);
+        month = std::stoi(m);
+        day = std::stoi(d);
+        
+        if (!(0 < day && day <= num_days(year, month) && 0 < month && month <= 12 && 0 < year && year < 10000) || std::to_string(year) != y || std::to_string(month) != m || std::to_string(day) != d) {
             year = month = day = 0;
         }
     } else {
@@ -77,9 +73,4 @@ int Date::get_day() const{
 
 bool Date::is_valid() const{
     return year && month && day;
-}
-
-
-int main(){
-    Date d3("2ooo/2/28"); d3.write(); std::cout << (d3.is_valid() ? "" : "-invalid") << std::endl;
 }
