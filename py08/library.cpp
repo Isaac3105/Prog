@@ -16,7 +16,7 @@ book Library::find_book(string title){
             return books[i];
         }
     }
-    return {};
+    return {"Not found"};
 }
 
 vector<book> Library::find_books(string author){
@@ -41,11 +41,7 @@ vector<book> Library::find_books(int year){
 
 void Library::print_books() {
     for (size_t i = 0; i < books.size(); i++) {
-        if (books[i].title.empty() && books[i].author.empty() && books[i].year == 0) {
-        std::cout << "Not found: (0)" << std::endl;
-        } else {
-            std::cout << books[i] << std::endl; // Print the actual book
-        }
+        std::cout << books[i] << std::endl;
     }
 }
 
