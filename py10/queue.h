@@ -9,13 +9,11 @@ public:
         push_back(value);  
     }
 
-    
     int pop() {
         if (size() == 0) return 0;
         return pop_front();  
     }
 
-    
     int size() {
         return List::size();  
     }
