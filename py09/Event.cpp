@@ -1,17 +1,12 @@
 #include <iostream>
 #include "Time.h"
-#include "Time.cpp"
 #include "Event.h"
 
-Event::Event(std::string t, Time time){
-    title = t;
-    event_time = time; 
-}
+Event::Event(std::string t, Time re) : title(t), event_time(re) {}
 
-Event::Event(const Event& e){
-    title = e.title;
-    event_time = e.event_time;
-}
+
+Event::Event(const Event& e) : title(e.title), event_time(e.event_time) {}
+
 
 std::string Event::get_title() const{
     return title;

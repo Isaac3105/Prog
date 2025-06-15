@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Time.h"
+#include <iomanip>
 
 Time::Time(int h, int m){
     hours = h;
@@ -20,11 +21,11 @@ int Time::get_minutes() const{
 }
 
 bool Time::is_before(const Time& other) const{
-    double first = hours + minutes/60;
-    double second = other.hours + other.minutes/60;
+    double first = (double)hours + (double)minutes/60;
+    double second = (double)other.hours + (double)other.minutes/60;
     return first < second;
 }
 
 void Time::print_time(){
-    std::cout << hours << ':' << minutes << std::endl;
+    std::cout << hours << ":" << std::setw(2) << std::setfill('0') << minutes << " | ";
 }
